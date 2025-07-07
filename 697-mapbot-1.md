@@ -91,7 +91,7 @@ for f in folder_path.iterdir():
     file_name = f.name url_gh = f'https://aliceaviggiani.github.io/map-bot/img_resized/{file_name}' 
     image_urls.append(url_gh) # selecting the post content to upload image_url = random.choice(image_urls) 
     
-caption = 'Posted from the Internet Archive metadata by a bot.' 
+caption = 'Posted from the Internet Archive metadata by a bot.'
 ```
 
 
@@ -119,7 +119,6 @@ Request the "id" from the .json format of the previous request, and extract the 
 
 
 ```python
-
 # geting the id of the post
 post_id = post_request.json().get("id")
 
