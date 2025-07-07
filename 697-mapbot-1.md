@@ -76,7 +76,7 @@ Load the tokens saved in the .env file.
 Read and store the image's URL in a list. The Instagram API only posts from published images, not from local files.
 Randomly select an image and its corresponding caption. (in progress)
 
-```python 
+```python
 # accessing the tokens 
 load_dotenv() 
 ACCESS_TOKEN = os.getenv("ACCESS_TOKEN") 
