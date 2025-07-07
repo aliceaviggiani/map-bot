@@ -69,7 +69,7 @@ Save the returned ID in the same .env file as INSTAGRAM_ACCOUNT_ID=<my_id>
 
 In VS Code, write code for the following steps:
 
-### 2.1 Import libraries
+### 2.1 Import 
 from dotenv import load_dotenv
 import os
 from pathlib import Path
@@ -95,7 +95,10 @@ image_urls = []
 
 for f in folder_path.iterdir(): 
     file_name = f.name url_gh = f'https://aliceaviggiani.github.io/map-bot/img_resized/{file_name}' 
-    image_urls.append(url_gh) # selecting the post content to upload image_url = random.choice(image_urls) 
+    image_urls.append(url_gh) 
+    
+# selecting the post content to upload 
+image_url = random.choice(image_urls) 
     
 caption = 'Posted from the Internet Archive metadata by a bot.'
 ```
