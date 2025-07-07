@@ -57,6 +57,8 @@ GET https://graph.facebook.com/v19.0/PAGE_ID?fields=instagram_business_account&a
 Save the returned ID in the same .env file as INSTAGRAM_ACCOUNT_ID=<my_id>
 
 
+
+
 ## 2. Write a script to post on Instagram using their Meta Graph API.
 
 In VS Code, write code for the following steps:
