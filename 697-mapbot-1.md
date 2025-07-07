@@ -70,12 +70,14 @@ Save the returned ID in the same .env file as INSTAGRAM_ACCOUNT_ID=<my_id>
 In VS Code, write code for the following steps:
 
 ### 2.1 Import 
+
+```python
 from dotenv import load_dotenv
-import os
-from pathlib import Path
-import random
+import os from pathlib
+import Path import random
 import requests
 from datetime import datetime
+```
 
 ### 2.2 Access external links
 Load the tokens saved in the .env file.
