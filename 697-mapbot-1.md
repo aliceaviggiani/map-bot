@@ -21,7 +21,7 @@ This tutorial focuses on steps 1 to 3.
 
 ## 1. Set up a Meta for Developers environment
 
-!(record/1.png)
+![Alt](record/1.png)
 
 ### 1.1 From a mobile, create the following accounts:
 Instagram Business (you can choose the option "business" while creating), Facebook (doesn't need to be business), and a Facebook page.  
