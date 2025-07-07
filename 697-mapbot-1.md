@@ -1,39 +1,81 @@
+# 697 Botz  
+**July 6, 2025**  
+**Alice Viggiani**
 
-# 697 robotz
-# july 2nd, 2025
-# how to build a bot to automatically post good references for a map design
+## A bot to daily post good references for map design from the Internet Archive metadata on Instagram
 
-To build a bot to automatically post once a day on Instagram, adopting as source the Internet Archive API, using Python in a iMac, we need to:
+---
 
-1. Create a Meta developer environment and accounts needed, as well as set up other requirements;
-2. Write a script to automate an Instagram post using Meta Graph API;
-3. Write a script on a .plist file to set an automatic task trigger and save it in the LauchAgents folder to you Mac computer;
-4. Write a script to download a set of images from a serch at Internet Archive using their API, in accordance with Instagram requirements;
-5. Upload and publish the resulting images in a GitHub respository;
-6. Uptade the first script (point 2) to get the actual images;
-7. Repeat points 4 to 6 when new images were needed.
+### Tutorial
 
-Further developments:
-1. Formating and uploading proper captions;
-2. Create a log text file to record the images posted and exclude then for the next posting process;
-3. Refine the process of resizing or cropping;
-4. Create a carossel post, with a crop of a detail as first image and the entery one as second;
-5. Automate the process to upload the images to GitHub.
+To build a bot that automatically posts once a day on Instagram, using Internet Archive metadata as a source, and programming with Python on an iMac, it will need to:
 
-This is the result:
-https://www.instagram.com/undr.constrctn/
-Check it out tomorrow at 8am! 
+1. Set up a Meta Developer environment and accounts as specified, and fulfill other necessary requirements.  
+2. Write a script to automate an Instagram post using the Meta Graph API.  
+3. Write a configuration in a `.plist` file to schedule a trigger that runs the script and save it in the `LaunchAgents` folder on a Mac computer.  
+4. Write a script to download a set of images from an Internet Archive search using their API, in accordance with Instagram's requirements.  
+5. Upload and publish the resulting images in a GitHub repository.  
+6. Update the first script with the actual images.  
+7. Repeat steps 4 to 6 when new images are needed.
 
+Check out the bot: [@undr.constrctn](https://www.instagram.com/undr.constrctn)
 
-For this tutorial, we'll focus on the points 1 to 3. 
+---
 
-1. Creating a Meta for Developers environment
+### Further developments:
+- Formatting and uploading proper captions.  
+- Create a `.log` file to record posted images and exclude them from the following random selection.  
+- Improve the process of resizing or cropping.  
+- Make a carousel post with a cropped detail as the first image and the full version as the second.  
+- Automate uploading images to GitHub.
 
-You will need to have: 
-1. Instagram business account;
-2. Facebook account;
-3. Facebook business page;
-4. Meta profile to centralize the accounts
+---
 
-![Map Poster](img_md/1.png)
+This tutorial focuses on **steps 1 to 3**.
 
+---
+
+## 1. Set up a Meta for Developers environment
+
+### 1.1 Create and connect accounts
+
+From a mobile:
+
+- Create the following accounts:
+  - **Instagram Business** (choose the "business" option when creating)
+  - **Facebook** (personal is enough)
+  - **Facebook Page**
+- Link them in: `Facebook > Settings > Linked accounts`
+
+### 1.2 Create a Meta Developer account
+
+[Meta Developer Signup](https://business.facebook.com/business/loginpage/?next=https%3A%2F%2Fdevelopers.facebook.com%2Fasync%2Fregistration#)  
+Follow the steps and always choose the **Business** option when prompted.
+
+### 1.3 Create an App in the Meta Developer Dashboard
+
+[Apps Dashboard](https://developers.facebook.com/apps/)  
+Create a new App and select your **Business Manager** account.  
+At the "Use cases" step, select **"Use the old version"**.
+
+### 1.4 Add a product
+
+- In your new app, click **"Add product"** → **"Set up"**
+- Follow the setup process
+
+### 1.5 Set permissions
+
+In **Tools > Graph API Explorer**, add these permissions:
+
+- `pages_show_list`
+- `instagram_basic`
+- `instagram_content_publish`
+- `pages_read_engagement`
+- `pages_manage_posts`
+
+### 1.6 Generate Access Token
+
+- In **Graph API Explorer**, click **Generate Access Token**
+- Save it in a `.env` file:
+  ```env
+  ACCESS_TOKEN=<my_token>
