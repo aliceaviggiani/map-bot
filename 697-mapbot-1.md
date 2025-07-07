@@ -3,7 +3,7 @@ July 6, 2025
 Alice Viggiani
 
 A bot to daily post good references for map design from the Internet Archive metadata on Instagram  
-Check out the bot: https://www.instagram.com/undr.constrctn
+Check out the bot: [@undr.constrctn](https://www.instagram.com/undr.constrctn/)
 
 ## Tutorial
 
@@ -19,26 +19,30 @@ To build a bot that automatically posts once a day on Instagram, using Internet 
 
 This tutorial focuses on steps 1 to 3.
 
+
 ## 1. Set up a Meta for Developers environment
 
-![Alt](record/1.png)
 
 ### 1.1 From a mobile, create the following accounts:
 Instagram Business (you can choose the option "business" while creating), Facebook (doesn't need to be business), and a Facebook page.  
 Connect all of them in Facebook > settings > linked accounts
 
 ### 1.2 Create a Meta Developer account: 
-https://business.facebook.com/business/loginpage/?next=https%3A%2F%2Fdevelopers.facebook.com%2Fasync%2Fregistration#  
-Follow the steps from the link and ensure that the option "Business" is chosen every time it is requested.
+![Alt](record/1_2.png)
+
+Follow the steps from this [link](https://business.facebook.com/business/loginpage/?next=https%3A%2F%2Fdevelopers.facebook.com%2Fasync%2Fregistration#) and ensure that the option "Business" is chosen every time it is requested.
 
 ### 1.3 Create an App in the Meta Developer Dashboard  
-https://developers.facebook.com/apps/  
-Follow the steps and select the Business Manager account. In the "Use cases" step, select the "Use the old version" option.
+![Alt](record/1_3.png)
+
+[Click](https://developers.facebook.com/apps/) and follow the steps and select the Business Manager account. In the "Use cases" step, select the "Use the old version" option.
 
 ### 1.4 Add a product  
 In the new app, click "Add product" and then "Set up". Follow the steps.
 
-### 1.5 Set permissions  
+### 1.5 Set permissions
+![Alt](record/1_5.png)
+
 In Tools > Graph API Explorer, add the permissions:  
 pages_show_list  
 instagram_basic  
@@ -162,6 +166,8 @@ Note: It must be the user's library, not the system's one.
 Also, it's necessary to verify the Python version used and ensure it's running properly. This script uses /opt/anaconda3/bin/python3.
 
 ### 3.3 Write the task in the .plist file
+![Alt](record/3_3.png)
+
 In VS Code, write the code in XML language, following the steps:
 
 Set up the code.
