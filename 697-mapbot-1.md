@@ -52,6 +52,8 @@ Tip: Debug the access token and set it to last 60 days. Otherwise, it will expir
 On the same page, at the URL line, select and type:
 
 GET https://graph.facebook.com/v19.0/me/accounts?access_token=<my_token>
+
+Then:
 GET https://graph.facebook.com/v19.0/PAGE_ID?fields=instagram_business_account&access_token=<my_token>
 
 Save the returned ID in the same .env file as INSTAGRAM_ACCOUNT_ID=<my_id>
