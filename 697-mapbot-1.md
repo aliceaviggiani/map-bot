@@ -57,8 +57,6 @@ GET https://graph.facebook.com/v19.0/PAGE_ID?fields=instagram_business_account&a
 Save the returned ID in the same .env file as INSTAGRAM_ACCOUNT_ID=<my_id>
 
 
-
-
 ## 2. Write a script to post on Instagram using their Meta Graph API.
 
 In VS Code, write code for the following steps:
@@ -98,7 +96,7 @@ caption = 'Posted from the Internet Archive metadata by a bot.'
 ### 2.3 Create the post content in the API requested format
 Create a dictionary with the image URL, caption, and token. Request a post to the Instagram Graph API by providing the posting URL combined with the Instagram ID created, along with the dictionary containing the content.
 
-<pre><code>```python 
+``python 
 post_url = f'https://graph.facebook.com/v19.0/{INSTAGRAM_ACCOUNT_ID}/media'
 
 post_content = {
@@ -112,13 +110,13 @@ post_request = requests.post(post_url, data=post_content)
 if post_request.status_code != 200:
     print("Error:", post_request.text)
     exit()
-```</code></pre>
+```
 
 
 ### 2.4 Getting the post ID
 Request the "id" from the .json format of the previous request, and extract the "id" from the dictionary created by the .json parsed (The ID is the only element in the dictionary). Create a dictionary with the necessary information for posting: the post ID and the token.
 
-<pre><code>```python 
+```python 
 # geting the id of the post
 post_id = post_request.json().get("id")
 
@@ -128,13 +126,13 @@ publish_wrap = {
     'creation_id': post_id,
     'access_token': ACCESS_TOKEN
 }
-```</code></pre>
+```
 
 ### 2.5 Post it! 
 Request to the Graph API to post, providing the URL and access codes.
 Tip: To track your schedule posts, print the time that was created so that it appears in the .log file (explained ahead). 
 
-<pre><code>```python
+```python
 # publishing!
 publish_request = requests.post(url_publish, data=publish_wrap)
 if publish_request.status_code != 200:
@@ -143,7 +141,7 @@ if publish_request.status_code != 200:
 
 time = datetime.now().strftime("%m/%d/%Y at %H:%M")
 print(f'It worked on {time} with the post id: {post_id} :)')
-```</code></pre>
+```
 
 
 ## 3. Write a configuration file .plist to run the script at a specified frequency.
@@ -211,7 +209,7 @@ Done : )
 
 Create a notebook Python file and copy the script:
 
-<pre><code>```python 
+```python 
 pip install internetarchive
 
 from internetarchive import download
@@ -362,7 +360,7 @@ df = pd.DataFrame({
 })
 
 df.to_csv(f"{download_dir}/{'ia-metadata-1.csv'}", index=False)
-```</code></pre>
+```
 
 
 ## Further developments:
