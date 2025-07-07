@@ -76,7 +76,7 @@ Load the tokens saved in the .env file.
 Read and store the image's URL in a list. The Instagram API only posts from published images, not from local files.
 Randomly select an image and its corresponding caption. (in progress)
 
-<pre><code>```python 
+```python 
 # accessing the tokens 
 load_dotenv() 
 ACCESS_TOKEN = os.getenv("ACCESS_TOKEN") 
@@ -92,7 +92,7 @@ for f in folder_path.iterdir():
     image_urls.append(url_gh) # selecting the post content to upload image_url = random.choice(image_urls) 
     
 caption = 'Posted from the Internet Archive metadata by a bot.' 
-```</code></pre>
+```
 
 
 ### 2.3 Create the post content in the API requested format
