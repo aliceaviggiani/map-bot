@@ -98,7 +98,7 @@ caption = 'Posted from the Internet Archive metadata by a bot.'
 ### 2.3 Create the post content in the API requested format
 Create a dictionary with the image URL, caption, and token. Request a post to the Instagram Graph API by providing the posting URL combined with the Instagram ID created, along with the dictionary containing the content.
 
-``python 
+```python 
 post_url = f'https://graph.facebook.com/v19.0/{INSTAGRAM_ACCOUNT_ID}/media'
 
 post_content = {
@@ -114,11 +114,12 @@ if post_request.status_code != 200:
     exit()
 ```
 
-
 ### 2.4 Getting the post ID
 Request the "id" from the .json format of the previous request, and extract the "id" from the dictionary created by the .json parsed (The ID is the only element in the dictionary). Create a dictionary with the necessary information for posting: the post ID and the token.
 
-```python 
+
+```python
+
 # geting the id of the post
 post_id = post_request.json().get("id")
 
